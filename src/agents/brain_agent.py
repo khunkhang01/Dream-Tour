@@ -6,7 +6,7 @@ from src.utils.prompts import BRAIN_PROMPT
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-1.5-pro')
 
-def generate_recommendations(context):
+def generate_recommendations_city(context):
     """
     รับ Context จาก Tavily -> ส่งเข้า Gemini ให้จัด JSON Top 5
     """
@@ -19,7 +19,7 @@ def generate_recommendations(context):
     return [
         {
             "rank": 1,
-            "place_name": "ม่อนแจ่ม, เชียงใหม่",
+            "place_name": "ม่อนแจ่ม, เชียงใหม่, แม่ฮ้องสอน",
             "description": "วิวภูเขาสวยงาม",
             "what_locals_say": "ทางขึ้นชัน ระวังรถติด",
             "local_transit": "เหมารถแดงจากตัวเมือง",
